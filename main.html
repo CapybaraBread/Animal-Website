@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Зоогостиница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .modal {
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content h2 {
+            color: #4a90e2;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+        }
+
+        input, select, textarea {
+            width: calc(100% - 20px);
+            margin-top: 5px;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #4a90e2;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        .service-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .service-button {
+            padding: 12px;
+            font-size: 16px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .service-button:hover {
+            background-color: #357ab7;
+            transform: scale(1.05);
+        }
+
+        .service-button:focus {
+            outline: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .modal-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .submit-button, .close-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 45%;
+        }
+
+        .submit-button {
+            background-color: #357ab7;
+        }
+
+        .close-button {
+            background-color: #4a90e2;
+        }
+
+        .submit-button:hover {
+            background-color: #2d6091;
+        }
+
+        .close-button:hover {
+            background-color: #3a7ab6;
+        }
+    </style>
+</head>
+<body>
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <h2>ФОРМА БРОНИРОВАНИЯ</h2>
+            <form id="bookingForm">
+                <label>
+                    Имя владельца:
+                    <input type="text" name="ownerName" required>
+                </label>
+                <label>
+                    Номер владельца:
+                    <input type="tel" name="ownerPhone" required pattern="^\+?[0-9]{10,15}$" placeholder="+79998887766">
+                </label>
+                <label>
+                    Животное:
+                    <select name="animalType" id="animalType" required>
+                        <option value="Собака">Собака</option>
+                        <option value="Кошка">Кошка</option>
+                        <option value="Другое">Другое</option>
+                    </select>
+                </label>
+                <label id="otherAnimalLabel" class="hidden">
+                    Укажите животное:
+                    <input type="text" name="otherAnimal">
+                </label>
+                <label>
+                    Размер животного:
+                    <select name="animalSize" required>
+                        <option value="Маленькое">Маленькое</option>
+                        <option value="Среднее">Среднее</option>
+                        <option value="Большое">Большое</option>
+                    </select>
+                </label>
+                <label>
+                    Дата заселения (с какого по какое):
+                    <input type="date" name="checkInDate" required>
+                    <input type="date" name="checkOutDate" required>
+                </label>
+                <label>
+                    Услуги:
+                    <div class="service-options">
+                        <button type="button" class="service-button" data-value="Стандартный номер (500 руб/сут)">Стандартный номер (500 руб/сут)</button>
+                        <button type="button" class="service-button" data-value="VIP номер (1000 руб/сут)">VIP номер (1000 руб/сут)</button>
+                        <button type="button" class="service-button" data-value="Вольер (500 руб/сут)">Вольер (500 руб/сут)</button>
+                    </div>
+                    <input type="hidden" name="service" id="serviceInput" required>
+                </label>
+
+                <label>
+                    Комментарий:
+                    <textarea name="comment" placeholder="Оставьте комментарий"></textarea>
+                </label>
+                <div class="modal-buttons">
+                    <button type="submit" class="submit-button">Отправить</button>
+                    <button type="button" class="close-button" id="closeModal">Свернуть</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("closeModal").addEventListener("click", () => {
+            document.getElementById("bookingModal").style.display = "none";
+        });
+
+        const animalTypeSelect = document.getElementById("animalType");
+        const otherAnimalLabel = document.getElementById("otherAnimalLabel");
+
+        animalTypeSelect.addEventListener("change", () => {
+            if (animalTypeSelect.value === "Другое") {
+                otherAnimalLabel.classList.remove("hidden");
+            } else {
+                otherAnimalLabel.classList.add("hidden");
+            }
+        });
+
+        const serviceButtons = document.querySelectorAll('.service-button');
+        serviceButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                document.getElementById('serviceInput').value = button.dataset.value;
+                serviceButtons.forEach(btn => btn.classList.remove('selected'));
+                button.classList.add('selected');
+            });
+        });
+
+        document.getElementById("bookingForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            const animalType = data.animalType === "Другое" ? data.otherAnimal : data.animalType;
+
+            const mailtoLink = `mailto:zootimoshka@gmail.com?subject=Бронирование&body=Имя владельца: ${encodeURIComponent(data.ownerName)}%0AНомер владельца: ${encodeURIComponent(data.ownerPhone)}%0AЖивотное: ${encodeURIComponent(animalType)}%0AРазмер животного: ${encodeURIComponent(data.animalSize)}%0AДата заселения: с ${encodeURIComponent(data.checkInDate)} по ${encodeURIComponent(data.checkOutDate)}%0AУслуга: ${encodeURIComponent(data.service)}%0AКомментарий: ${encodeURIComponent(data.comment || "Комментарий отсутствует")}`;
+
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+    background-color: #ffffff;
+}
+
+.reserve{
+    border-radius: 10px;
+    color: #1A2C36;
+    transition: .2s linear;
+    background: linear-gradient(to bottom right, #3DF0F9, #FEFCFC);;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 80px;
+}       
+
+.reserve:hover {
+    box-shadow: 2px 2px white, 4px 4px #FC63B5;
+    top: -4px;
+    left: -4px;
+}
+
+.hat{
+    background-color: #1A2C36;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1{
+    color: #FEFCFC;
+    display: block;
+}
+
+.subheading{
+    color:#FEFCFC;
+}
+.icon{
+    width: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+.Links{
+    color:#FEFCFC;
+    text-decoration: none;
+    margin: 20px;
+}
+.list{
+    display: flex;
+}
+.Foot{
+    width: 200px;
+    margin-left: 100px;
+}
+
+.House {
+    width: 300px;
+    height: 300px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.about_us{
+    text-align: left;
+    margin-top: 180px;
+}
+
+.ifo_foto{
+    float: left;
+    width: 350px;
+    padding: 20px;
+    border-radius: 11%;
+}
+.info{
+    margin-top: 60px;
+}
+.Admission_rules{
+    margin-top: 100px;
+    background-color: #1A2C36;
+    color:#FEFCFC;
+    list-style-type:  none;
+}
+.text_rules{
+    color:#FEFCFC;
+    list-style-type:  none;
+}
+.main_hader{
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+.a{
+    display: flex;
+}
+.b{
+    background: linear-gradient(to bottom right, #3DF0F9, #FEFCFC);
+    border-radius:10px;
+    margin-left: 100px;
+    text-align: center;
+    margin-bottom: -100px;
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+.list_rules{
+    display: flex;
+}
+.ruls_foto{
+    width: 500px;
+    height: 500px;
+    border-radius:11%;
+    margin: 10px;
+}
+.title_rules{
+    text-align: center;
+    padding-top: 30px;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+.pictures_content{
+    display: flex;
+}
+.text_content{
+    text-align: left;
+    margin-left: 90px;
+}
+.Foot_class{
+    display: flex;
+}
+.about_us_title{
+    text-align: center;
+}
+.feather{
+    margin-top: 10px;
+}
