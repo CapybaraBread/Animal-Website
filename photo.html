@@ -5,12 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фотогалерея</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style_photo.css">
+    <link rel="stylesheet" href="css/style_photo.css">
     
 </head>
 <body>
     <div class="background-stripes"></div>
     <div class="container">
+        <nav class="list">
+            <a class="Links" href="layout.html">Домой</a>
+            <a class="Links" href="services.html">Услуги</a>
+            <a class="Links" href="photo.html">Фото</a>
+            <a class="Links" href="questions.html">Вопросы</a>
+            <a class="Links" href="geo.html">Контакты</a>
+            <a class="Links" href="about_us.html">О нас</a>
+        </nav>
         <h1>ФОТОГАЛЕРЕЯ</h1>
         <p>Более 1000 пушистиков смогли побывать нашими гостями</p>
         <div class="gallery">
@@ -31,8 +39,17 @@
 
         <button class="gallery-button" id="show-more">Показать ещё</button>
         <button class="gallery-button hidden" id="collapse">Свернуть</button>
+        <footer>
+            <div class="logo-small">
+                <img src="images/icon.jpg" alt="Logo">
+            </div>
+            <p>Политика конфиденциальности</p>
+            <div class="social-icons">
+                <a href="geo.html"><img src="images/icons8-вконтакте-250.png" alt="VK"></a>
+                <a href="geo.html"><img src="images/icons8-gmail-250.png" alt="Mail"></a>
+            </div>
+        </footer>
     </div>
-
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

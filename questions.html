@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <script src="main.js"></script>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="js/main.js"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Зоогостиница Тимошка</title>
 </head>
 <body>
     <div class="content">
+        <nav class="list">
+            <a class="Links" href="layout.html">Домой</a>
+            <a class="Links" href="services.html">Услуги</a>
+            <a class="Links" href="photo.html">Фото</a>
+            <a class="Links" href="questions.html">Вопросы</a>
+            <a class="Links" href="geo.html">Контакты</a>
+            <a class="Links" href="about_us.html">О нас</a>
+        </nav>
         <section id="services">
             <div class="container">       
                 <div class="faq-header">Часто задаваемые вопросы</div>
@@ -18,37 +26,47 @@
                     <input id="q1" type="checkbox" class="panel">
                     <div class="plus">+</div>
                     <label for="q1" class="panel-title">Какие условия проживания вы предлагаете?</label>
-                    <div class="panel-content">Описываем номера/вольеры: размер, наличие игрушек, лежаков, индивидуального выгула и т.д.</div>
+                    <div class="panel-content">Мы предлагаем комфортные номера для животных и просторные вольеры. В каждом номере есть лежак, игрушки и миски. Для собак предусмотрены индивидуальные прогулки, а для кошек — игровые зоны. Все помещения регулярно убираются, чтобы обеспечить чистоту и уют для вашего питомца.</div>
                 </div>
                 
                 <div class="faq-question">
                     <input id="q2" type="checkbox" class="panel">
                     <div class="plus">+</div>
                     <label for="q2" class="panel-title">Что нужно взять с собой для питомца?</label>
-                    <div class="panel-content">Перечисляем: корм, миски, поводок, любимые игрушки, ветеринарный паспорт и т.д.</div>
+                    <div class="panel-content">Просим привезти корм, к которому привык ваш питомец, миски, поводок (для собак), любимые игрушки, а также ветеринарный паспорт с актуальными прививками.</div>
                 </div>
                 
                 <div class="faq-question">
                     <input id="q3" type="checkbox" class="panel">
                     <div class="plus">+</div>
                     <label for="q3" class="panel-title">Чем вы кормите животных?</label>
-                    <div class="panel-content">Описываем рацион: виды кормов, возможность выбора, приготовление специальной диеты </div>
+                    <div class="panel-content">Мы предлагаем сбалансированное питание: качественные сухие и влажные корма, а также возможность индивидуального рациона по медицинским рекомендациям. Если питомец на особой диете, готовим специальные блюда по запросу.</div>
                 </div>
                 <div class="faq-question">
                     <input id="q4" type="checkbox" class="panel">
                     <div class="plus">+</div>
                     <label for="q4" class="panel-title">Как забронировать место для питомца? </label>
-                    <div class="panel-content">Описываем способы бронирования: по телефону, онлайн, лично</div>
+                    <div class="panel-content">Забронировать место можно по телефону, через наш сайт или посетив нас лично. Мы всегда рады помочь подобрать удобное время и ответить на все вопросы.
+                    </div>
                 </div>
                 <div class="faq-question">
                     <input id="q5" type="checkbox" class="panel">
                     <div class="plus">+</div>
                     <label for="q5" class="panel-title">Какие способы оплаты вы принимаете?</label>
-                    <div class="panel-content">Перечисляем способы оплаты: наличные, банковская карта, электронный кошелек, крипта$$</div>
+                    <div class="panel-content">Мы принимаем наличные, банковские карты, электронные кошельки, а также криптовалюту для вашего удобства.</div>
                 </div>
                 </div>
             </div>
         </section>
-
+        <footer>
+            <div class="logo-small">
+                <img src="images/icon.jpg" alt="Logo">
+            </div>
+            <p>Политика конфиденциальности</p>
+            <div class="social-icons">
+                <a href="geo.html"><img src="images/icons8-вконтакте-250.png" alt="VK"></a>
+                <a href="geo.html"><img src="images/icons8-gmail-250.png" alt="Mail"></a>
+            </div>
+        </footer>
 </body>
 </html>

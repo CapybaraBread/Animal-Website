@@ -10,7 +10,25 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 100;
+}
+nav a {
+    color: #007caa;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffffff;
+}
 .container {
     max-width: 600px;
     margin: 50px auto;
