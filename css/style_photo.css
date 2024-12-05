@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -9,7 +10,10 @@ body {
     align-items: center;
     height: 100vh;
 }
-nav {
+.lists{
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
     position: fixed;
     top: 0;
     left: 0;
@@ -18,14 +22,20 @@ nav {
     text-align: center;
     z-index: 100;
 }
-nav a {
-    color: #007caa;
+.lists a {
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    color: #1A2C36;
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
     transition: color 0.3s;
 }
-nav a:hover {
+.lists a:hover {   
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
     color: #ffffff;
 }
 .container {

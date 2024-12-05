@@ -217,6 +217,9 @@ footer .social-icons img {
     border-radius: 50%;
 }
 .lists{
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
     position: fixed;
     top: 0;
     left: 0;
@@ -226,12 +229,18 @@ footer .social-icons img {
     z-index: 100;
 }
 .lists a {
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
     color: #1A2C36;
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
     transition: color 0.3s;
 }
-.lists a:hover {
+.lists a:hover {    
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
     color: #ffffff;
 }

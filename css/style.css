@@ -7,7 +7,10 @@ body {
     padding: 0;
     line-height: 1.6;
 }
-nav {
+.lists{
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
     position: fixed;
     top: 0;
     left: 0;
@@ -16,14 +19,20 @@ nav {
     text-align: center;
     z-index: 100;
 }
-nav a {
-    color: #000;
+.lists a {
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    color: #1A2C36;
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
     transition: color 0.3s;
 }
-nav a:hover {
+.lists a:hover {    
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
     color: #ffffff;
 }
 header {
