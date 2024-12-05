@@ -52,7 +52,7 @@ header h1, header p {
 .content {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 0 40px;
 }
 .main_header {
     text-align: center;
@@ -90,7 +90,7 @@ header h1, header p {
 
 .section-title {
     font-size: 2em;
-    margin-bottom: 20px;
+    margin-top: 70px;
     border-bottom: 2px solid #000;
     padding-bottom: 10px;
 }
