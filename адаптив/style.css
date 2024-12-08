@@ -15,6 +15,7 @@ nav {
     padding: 10px 0;
     text-align: center;
     z-index: 100;
+    background-color: #FFFFFF;
 }
 nav a {
     color: #000;
@@ -70,7 +71,7 @@ header h1, header p {
     align-items: center;
 }
 .column {
-    width: 30%;
+    flex: 1;
 }
 .service {
     display: flex;
@@ -163,8 +164,8 @@ img {
     position: relative;
     top: 0;
     left: 0;
-    width: 260px;
-    height: 80px;
+    width: 150px;
+    height: 70px;
 }
 .res-butt:hover{
     box-shadow: 2px 2px white, 4px 4px #FC63B5;
@@ -429,4 +430,102 @@ footer .social-icons img {
     .plus {
         position: fixed;
     }
+}
+
+@media (max-width:660px) {
+    .content {
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 0px 0px;
+    }
+}
+
+
+@media (max-width:810px) {
+
+}
+
+@media (max-width: 1100px) {
+    .center-img{
+        display: none;
+    }
+    .first_three_column{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+
+    }
+    #left-column {
+        display: flex;
+        flex-direction: row;
+        gap: 75px;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #right-column {
+        display: flex;
+        flex-direction: row;
+        gap: 75px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1101px) {
+    .display_image {
+        display: none;
+    }
+}
+
+@media (max-width:785px){
+    #left-column {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        gap: 5px;
+    }
+    #right-column{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    .service-text {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .service-text > * {
+        width: 100%;
+        text-align: justify;
+    }
+    #left-column .service:first-child{
+        margin-right: 100px;
+    }
+    .options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+@media (max-width: 490px) {
+    .options .res-butt{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .res-butt {
+        width: 150px;
+        height: 70px;
+    }
+
 }
