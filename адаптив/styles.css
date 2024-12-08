@@ -196,6 +196,7 @@ footer .social-icons img {
     padding: 10px 0;
     text-align: center;
     z-index: 100;
+    background-color: #ffffff;
 }
 .lists a {
     color: #1A2C36;
@@ -207,9 +208,7 @@ footer .social-icons img {
 .lists a:hover {
     color: #ffffff;
 }
-.lists {
-    background-color: #77838a;
-}
+
 .top{
     display: flex;
     justify-content: space-between;
