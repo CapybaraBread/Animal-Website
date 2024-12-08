@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -7,9 +10,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+    background-color: #1A2C36;
 }
 nav {
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     position: fixed;
     top: 0;
     left: 0;
@@ -19,23 +26,30 @@ nav {
     z-index: 100;
 }
 nav a {
-    color: #007caa;
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffff;
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
     transition: color 0.3s;
 }
 nav a:hover {
-    color: #ffffff;
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;;
 }
 .container {
-    max-width: 700px;
+    max-width: 80%;
     padding: 20px;
     text-align: center;
-    background-color: #1A2C36;
-    /* border-radius: 15px; */
-    position: relative;
+    background-color: #14252e;
+    border-radius: 15px;
+    position: center;
     z-index: 10;
+
 }
 
 .background-stripes {
@@ -66,12 +80,12 @@ p {
 }
 
 .gallery {
-
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     justify-content: center;
 }
+
 .gallery img {
     width: 150px;
     height: 150px;

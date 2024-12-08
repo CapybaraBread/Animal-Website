@@ -7,7 +7,10 @@ body {
     padding: 0;
     line-height: 1.6;
 }
-nav {
+.lists{
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
     position: fixed;
     top: 0;
     left: 0;
@@ -17,15 +20,21 @@ nav {
     z-index: 100;
     background-color: #FFFFFF;
 }
-nav a {
-    color: #000;
+.lists a {
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    color: #1A2C36;
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
     transition: color 0.3s;
 }
-nav a:hover {
-    color: #ffffff;
+.lists a:hover {    
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    font-size: 20px;;
 }
 header {
     /* background-image: url(https://cachizer1.2gis.com/autosite/68f49471-62a7-42ce-9425-2e252655e3ba.jpg);
@@ -301,16 +310,15 @@ text-align: center;
   text-align: center;
 }
 
-/* .panel-title {
+.panel-title {
   font-size: 24px;
-   width: 100%; 
+  /* width: 100%; */
   position: relative;
   margin: 0;
   padding: 10px 10px 0 42px;
   display: block;
   cursor: pointer;
-} */
-
+}
 
 .panel-content {
   font-size: 20px;
@@ -334,7 +342,21 @@ text-align: center;
 }
 
 .plus {
-display: none;
+  position: absolute;
+  margin-left: 20%;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 45px;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
 }
 
 .panel:checked ~ .plus {
@@ -347,45 +369,6 @@ display: none;
 .panel {
   display: none;
 }
-
-
-
-.panel-title {
-    font-size: 24px;
-    position: relative;
-    margin: 0;
-    padding: 10px 10px 0 42px; /*  Увеличил левый padding для плюса */
-    display: block;
-    cursor: pointer;
-}
-
-.panel-title::before {
-    content: "+";
-    position: absolute;
-    left: 10px; /*  Позиционирование плюса */
-    top: 50%;
-    transform: translateY(-50%); /* Центрирование по вертикали */
-    font-size: 45px;
-    line-height: 100%;
-    -webkit-user-select: none;    
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-    -webkit-transition: .2s ease;
-    -moz-transition: .2s ease;
-    -o-transition: .2s ease;
-    transition: .2s ease;
-  }
-
-  .panel:checked ~ .panel-title::before {
-    -webkit-transform: translateY(-50%) rotate(45deg); /*  Поворот при открытии */
-    -moz-transform: translateY(-50%) rotate(45deg);
-    -o-transform: translateY(-50%) rotate(45deg);
-    transform: translateY(-50%) rotate(45deg);
-  }
-
-
 
 footer {
     margin-top: 200px;

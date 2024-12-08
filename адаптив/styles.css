@@ -1,3 +1,5 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body{
     font-family: "Arsenal", sans-serif;
@@ -51,8 +53,15 @@ h1{
     color:#FEFCFC;
     font-size:25px;
 }
-
-
+.icon{
+    width: 100px;
+    margin-right: 100px;
+    margin-bottom: 50px;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+}
 .Links{
     color:#FEFCFC;
     text-decoration: none;
@@ -61,10 +70,20 @@ h1{
 }
 .list{
     display: flex;
+    
+}
+.Foot{
+    width: 200px;
+    margin-left: 50px;
 }
 
-
-
+.House {
+    padding-left: 15%;
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+    max-height: 100%;
+}
 
 
 .about_us{
@@ -75,8 +94,9 @@ h1{
 }
 
 .ifo_foto{
-    float: none;
+    float: left;
     width: 550px;
+    padding: 40px;
     border-radius: 11%;
 }
 .info{
@@ -122,16 +142,24 @@ h1{
 
 }
 
+.list_rules{
+    display: flex;
+}
 .ruls_foto{
     width: 600px;
     height: 500px;
     border-radius:11%;
+    margin: 20px;
 }
 .title_rules{
     text-align: center;
     padding-top: 30px;
 }
-
+.container {
+    width: 80%;
+    margin: 0 auto;
+    /* background-color: #f2f2f2; */
+}
 .title_site {
     font-size: 50px;
 }
@@ -189,6 +217,9 @@ footer .social-icons img {
     border-radius: 50%;
 }
 .lists{
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
     position: fixed;
     top: 0;
     left: 0;
@@ -199,24 +230,20 @@ footer .social-icons img {
     background-color: #ffffff;
 }
 .lists a {
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
     color: #1A2C36;
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
     transition: color 0.3s;
 }
-.lists a:hover {
-    color: #ffffff;
-}
-
-.top{
-    display: flex;
-    justify-content: space-between;
-}
-.icon{
-    width: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
+.lists a:hover {    
+    font-family: "Arsenal", sans-serif;
+    font-weight: 400;
+    font-style: normal;    
+    font-size: 20px;;
 }
 
 
